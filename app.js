@@ -15,6 +15,22 @@ class Library{
         this.books = books 
     }
     markRead(checkbox, id){
+        for (let book of this.books){
+            if (id === Book.id){
+                checkbox.checked = true
+                checkbox.disabled = true
+            }
+        }
+    }
+    addBook(){
+        let titleInput = document.querySelector("#titleInput")
+        let titleValue = titleInput.value 
+        let authorInput = document.querySelector("#authorInput")
+        let authorValue = authorInput.value
+        let readCheckboxInput = document.querySelector("#readCheckbox")
+        let readCheckboxValue = readCheckboxInput.value
+        let NewBook = new Book(titleValue, authorValue, readCheckboxValue)
         
+
     }
 }
